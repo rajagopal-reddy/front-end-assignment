@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;            
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .container {
+            margin: auto;
+            display: flex;
+            gap: 8px;
+            border-radius: 3px;
+            overflow: hidden;
+            width: 690px;
+            height: 528px;
+        }
+
+        .login-form {
+            color: #212121;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .form-text {
+            width: 40%;
+            background: url('./background.png') no-repeat;
+            background-color: #2874f0;
+            background-position: center 85%;
+            color: #fff;
+            padding: 40px 33px;
+        }
+
+        .header-text {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .sub-text {
+            margin-top: 16px;
+            line-height: 1.5;
+            color: #dbdbdb;
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .form-img{
+          margin-top: 230px;
+          text-align: center;
+        }
+
+        .form-img img{
+          width: 150px;
+          height: 70px;
+        }
+        
+
+        .main-form {
+            width: 60%;
+            padding: 56px 35px 16px;
+            background-color: whitesmoke;
+            position: relative;
+        }
+
+        .input-field {
+            position: relative;
+            margin-bottom: 34px;
+        }
+
+        input {
+            padding: 8px 10px 10px 0;
+            width: 100%;
+            color: #000;
+            background: #fff;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #747474;
+            background-color: whitesmoke;
+            font-size: 16px;
+        }
+
+        .floating-label {
+            color: #747474;
+            font-weight: 400;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            background-color: whitesmoke;
+            pointer-events: none;
+            transform: translateY(-50%);
+            transition: 0.2s ease all;
+            background-color: whitesmoke; 
+            padding: 0 4px; 
+            font-size: 18px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        input:focus + .floating-label,
+        input:not(:placeholder-shown) + .floating-label {
+            transform: translateY(-120%);
+            font-size: 12.8px;
+        }
+
+        input:focus, input:not(:placeholder-shown) {
+            border-bottom: 1px solid #2874f0;
+        }
+
+        .tc-text {
+            color: #878787;
+            font-size: 15px;
+            font-weight: 400;
+            padding-top: 20px;
+        }
+
+        a {
+            color: #0010f1;
+            text-decoration: none;
+        }
+
+        .btn_otp {
+            background: #fb641b;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 2px;
+            color: #fff;
+            width: 100%;
+            height: 44px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 24px;
+            cursor: pointer;
+        }
+
+        .create-account {
+            position: absolute;
+            bottom: 32px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #8400ff;
+            font-size: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .create-account a { 
+            color: #8400ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <div class="form-text">
+                <span class="header-text">Login</span>
+                <p class="sub-text">Get access to your Orders, Wishlist and Recommendations</p>
+                <div class=" form-img">
+                  <img src="https://via.placeholder.com/150">
+                </div>                
+            </div>
+            <div class="main-form">
+                <form action="">
+                    <div class="input-field">
+                        <input type="text" id="email" placeholder="" required>
+                        <label for="email" class="floating-label">Enter Email/Mobile number</label>
+                    </div>
+                    <div class="tc-text">
+                        By continuing, you agree to Flipkart's
+                        <a href="/">Terms of Use</a> and
+                        <a href="/">Privacy Policy</a>.
+                    </div>
+                    <button type="submit" class="btn_otp">Request OTP</button>
+                </form>
+                <div class="create-account">
+                    New to Flipkart? <a href="">Create an account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
