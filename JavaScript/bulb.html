@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .bulb{
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 0px 1px #000000;
+      
+    } 
+
+    .btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button{
+      height: 10vh;
+      width: 10vh;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .on{
+      background-color: green;
+    }
+
+    .off{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="bulb"></div>
+  <div class="btn">
+    <button class="on">on</button>
+    <button class="off">off</button>
+  </div>
+  
+</body>
+<script>
+
+let bulb = document.querySelector(".bulb");
+let on = document.querySelector(".on");
+let off = document.querySelector(".off");
+
+on.addEventListener("click", function () {
+  let color = prompt("Enter the color for the bulb:");
+  bulb.style.backgroundColor = color || "white"; 
+});
+
+off.addEventListener("click", function () {
+  bulb.style.backgroundColor = "white"; 
+});
+
+</script>
+</html>
